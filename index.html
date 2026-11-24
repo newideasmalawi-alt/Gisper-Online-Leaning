@@ -4,38 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#132c29">
-  <meta name="description" content="GISPER Online Learning: lessons, study notes, quizzes and practical activities for primary school learners.">
+  <meta name="description" content="GISPER Online Learning: primary-school lessons, notes, PSLC-style practice and progress tracking.">
   <title>GISPER Online Learning</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <div class="brand"><span class="brand-mark">G</span><div><strong>GISPER</strong><small>ONLINE LEARNING</small></div></div>
+      <a class="brand" href="#dashboard" aria-label="GISPER home"><span class="brand-mark">G</span><span><strong>GISPER</strong><small>ONLINE LEARNING</small></span></a>
       <nav aria-label="Main navigation">
         <button class="nav active" data-page="dashboard">⌂ Dashboard</button>
         <button class="nav" data-page="subjects">▣ Subjects</button>
         <button class="nav" data-page="notes">▤ Notes</button>
         <button class="nav" data-page="quiz">❖ Quizzes</button>
-        <button class="nav" data-page="practical">✎ Practical Questions</button>
+        <button class="nav" data-page="practical">✎ Practical</button>
       </nav>
-      <div class="sidebar-foot">Learn • Practice • Grow<br><small>Primary School Learning</small></div>
+      <div class="sidebar-foot">Learn • Practise • Grow<br><small>Primary School Learning</small></div>
     </aside>
     <main class="main">
       <header class="topbar">
         <div><small>GISPER LEARNING PORTAL</small><h1 id="page-title">Dashboard</h1></div>
-        <div class="student-chip"><span aria-hidden="true">👩‍🎓</span><div><b>Student</b><small>Primary Learner</small></div></div>
+        <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="learning-search" type="search" placeholder="Search learning materials" aria-label="Search learning materials"></label>
+        <div class="student-chip"><span aria-hidden="true">👩‍��</span><span><b>Student</b><small>Primary Learner</small></span></div>
       </header>
       <section id="dashboard" class="page show">
-        <div class="hero"><div class="hero-copy"><span class="pill">WELCOME TO GISPER</span><h2>Learn something<br>new every day.</h2><p>Explore lessons, test your knowledge and practise important skills.</p><button class="primary" data-go="subjects">Explore subjects <span aria-hidden="true">➜</span></button></div></div>
-        <div class="stats"><div><b>3</b><span>Subjects</span></div><div><b>10</b><span>Quizzes per subject</span></div><div><b>50</b><span>Questions per quiz</span></div><div><b>50</b><span>Practical questions / subject</span></div></div>
-        <h3>Continue learning</h3><div id="subject-cards" class="cards"></div>
+        <div class="hero"><div class="hero-copy"><span class="pill">PSLC-STYLE PRACTICE</span><h2>Learn something<br>new every day.</h2><p>Explore primary-school lessons, practise skills and check your progress.</p><button class="primary" data-go="subjects">Explore subjects <span aria-hidden="true">➜</span></button></div></div>
+        <div class="stats"><div><b id="stat-subjects">3</b><span>Subjects</span></div><div><b id="stat-completed">0</b><span>Quizzes completed</span></div><div><b id="stat-average">—</b><span>Average score</span></div><div><b id="stat-best">—</b><span>Best score</span></div></div>
+        <section class="panel"><h2>Continue learning</h2><div id="subject-cards" class="cards"></div></section>
+        <section class="panel"><div class="section-head"><h2>Recent quiz results</h2><button class="text-button" data-go="quiz">Practise now</button></div><div id="recent-history" class="history-list"></div></section>
       </section>
-      <section id="subjects" class="page"><h2>Subjects</h2><p class="muted">Choose a subject to explore its notes, quizzes and practical tasks.</p><div id="all-subjects" class="cards"></div></section>
+      <section id="subjects" class="page"><h2>Subjects</h2><p class="muted">Choose a subject to explore its notes, quizzes and practical activities.</p><div id="all-subjects" class="cards"></div></section>
       <section id="notes" class="page"><div class="section-head"><h2>Study Notes</h2><select id="notes-subject" aria-label="Choose subject for study notes"></select></div><div id="notes-content" class="paper"></div></section>
-      <section id="quiz" class="page"><div class="section-head"><h2>Quiz Practice</h2><select id="quiz-subject" aria-label="Choose quiz subject"></select><select id="quiz-number" aria-label="Choose quiz number"></select></div><div class="quiz-box" id="quiz-box"><p>Select a subject and quiz, then start.</p><button class="primary" id="start-quiz">Start quiz (50 questions)</button></div></section>
-      <section id="practical" class="page"><div class="section-head"><h2>Practical Questions</h2><select id="practical-subject" aria-label="Choose subject for practical questions"></select></div><div id="practical-list" class="paper"></div></section>
-      <footer>GISPER Online Learning · Primary School</footer>
+      <section id="quiz" class="page"><div class="section-head"><h2>Quiz Practice</h2><select id="quiz-subject" aria-label="Choose quiz subject"></select><select id="quiz-number" aria-label="Choose quiz number"></select></div><div class="quiz-settings"><label><input id="timer-toggle" type="checkbox"> Use a 30-minute timer</label><span>PSLC-style practice questions · not official past-paper questions</span></div><div class="quiz-box" id="quiz-box"><p>Select a subject and quiz, then start your practice.</p><button class="primary" id="start-quiz">Start quiz</button></div></section>
+      <section id="practical" class="page"><div class="section-head"><h2>Practical Activities</h2><select id="practical-subject" aria-label="Choose subject for practical activities"></select></div><div id="practical-list" class="paper"></div></section>
+      <footer>GISPER Online Learning · Primary School · Original PSLC-style practice, not official examination material</footer>
     </main>
   </div>
   <script src="app.js"></script>
