@@ -1,17 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GISPER Online Learning</title><link rel="stylesheet" href="style.css">
-</head><body>
-<div class="app-shell">
-<aside class="sidebar"><div class="brand"><span class="brand-mark">G</span><div><strong>GISPER</strong><small>ONLINE LEARNING</small></div></div>
-<nav><button class="nav active" data-page="dashboard">⌂ Dashboard</button><button class="nav" data-page="subjects">▣ Subjects</button><button class="nav" data-page="notes">▤ Notes</button><button class="nav" data-page="quiz">✓ Quizzes</button><button class="nav" data-page="practical">✎ Practical Questions</button></nav>
-<div class="sidebar-foot">Learn • Practice • Grow<br><small>Primary School Learning</small></div></aside>
-<main class="main"><header class="topbar"><div><small>GISPER LEARNING PORTAL</small><h1 id="page-title">Dashboard</h1></div><div class="student-chip"><span>👩‍🎓</span><div><b>Student</b><small>Primary Learner</small></div></div></header>
-<section id="dashboard" class="page show"><div class="hero"><div class="hero-copy"><span class="pill">WELCOME TO GISPER</span><h2>Learn something<br>new every day.</h2><p>Explore lessons, test your knowledge and practise important skills.</p><button class="primary" data-go="subjects">Explore subjects →</button></div></div><div class="stats"><div><b>3</b><span>Subjects</span></div><div><b>10</b><span>Quizzes per subject</span></div><div><b>50</b><span>Questions per quiz</span></div><div><b>50</b><span>Practical questions / subject</span></div></div><h3>Continue learning</h3><div id="subject-cards" class="cards"></div></section>
-<section id="subjects" class="page"><h2>Subjects</h2><p class="muted">Choose a subject to explore its notes, quizzes and practical tasks.</p><div id="all-subjects" class="cards"></div></section>
-<section id="notes" class="page"><div class="section-head"><h2>Study Notes</h2><select id="notes-subject"></select></div><div id="notes-content" class="paper"></div></section>
-<section id="quiz" class="page"><div class="section-head"><h2>Quiz Practice</h2><select id="quiz-subject"></select><select id="quiz-number"></select></div><div class="quiz-box" id="quiz-box"><p>Select subject and quiz, then start.</p><button class="primary" id="start-quiz">Start quiz (50 questions)</button></div></section>
-<section id="practical" class="page"><div class="section-head"><h2>Practical Questions</h2><select id="practical-subject"></select></div><div id="practical-list" class="paper"></div></section>
-<footer>GISPER Online Learning · Primary School</footer></main></div><script src="app.js"></script></body></html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#132c29">
+  <meta name="description" content="GISPER Online Learning: lessons, study notes, quizzes and practical activities for primary school learners.">
+  <title>GISPER Online Learning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">G</span><div><strong>GISPER</strong><small>ONLINE LEARNING</small></div></div>
+      <nav aria-label="Main navigation">
+        <button class="nav active" data-page="dashboard">⌂ Dashboard</button>
+        <button class="nav" data-page="subjects">▣ Subjects</button>
+        <button class="nav" data-page="notes">▤ Notes</button>
+        <button class="nav" data-page="quiz">❖ Quizzes</button>
+        <button class="nav" data-page="practical">✎ Practical Questions</button>
+      </nav>
+      <div class="sidebar-foot">Learn • Practice • Grow<br><small>Primary School Learning</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><small>GISPER LEARNING PORTAL</small><h1 id="page-title">Dashboard</h1></div>
+        <div class="student-chip"><span aria-hidden="true">👩‍🎓</span><div><b>Student</b><small>Primary Learner</small></div></div>
+      </header>
+      <section id="dashboard" class="page show">
+        <div class="hero"><div class="hero-copy"><span class="pill">WELCOME TO GISPER</span><h2>Learn something<br>new every day.</h2><p>Explore lessons, test your knowledge and practise important skills.</p><button class="primary" data-go="subjects">Explore subjects <span aria-hidden="true">➜</span></button></div></div>
+        <div class="stats"><div><b>3</b><span>Subjects</span></div><div><b>10</b><span>Quizzes per subject</span></div><div><b>50</b><span>Questions per quiz</span></div><div><b>50</b><span>Practical questions / subject</span></div></div>
+        <h3>Continue learning</h3><div id="subject-cards" class="cards"></div>
+      </section>
+      <section id="subjects" class="page"><h2>Subjects</h2><p class="muted">Choose a subject to explore its notes, quizzes and practical tasks.</p><div id="all-subjects" class="cards"></div></section>
+      <section id="notes" class="page"><div class="section-head"><h2>Study Notes</h2><select id="notes-subject" aria-label="Choose subject for study notes"></select></div><div id="notes-content" class="paper"></div></section>
+      <section id="quiz" class="page"><div class="section-head"><h2>Quiz Practice</h2><select id="quiz-subject" aria-label="Choose quiz subject"></select><select id="quiz-number" aria-label="Choose quiz number"></select></div><div class="quiz-box" id="quiz-box"><p>Select a subject and quiz, then start.</p><button class="primary" id="start-quiz">Start quiz (50 questions)</button></div></section>
+      <section id="practical" class="page"><div class="section-head"><h2>Practical Questions</h2><select id="practical-subject" aria-label="Choose subject for practical questions"></select></div><div id="practical-list" class="paper"></div></section>
+      <footer>GISPER Online Learning · Primary School</footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
